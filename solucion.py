@@ -5,19 +5,13 @@ def reloj_arena(m: int, s: str) -> str:
     if m <= 0:
         print("Error: La altura debe ser un entero positivo")
         return
-    # imprimir reloj de arena
-    for i in range(m, 0, -1):
-        for j in range(m - i):
-            print(" ", end="")
-        for k in range(1, i * 2):
-            print(s, end="")
-        print()
-    # parte inferior
-    for i in range(2, m + 1):
-        for j in range(m - i):
-            print(" ", end="")
-        for k in range(1, i * 2):
-            print(s, end="")
-        print()
+    # Imprimir la parte superior del reloj de arena
+    for i in range(m, 0, -2):
+        space = (m - i) // 2
+        print(" " * space + s * i)
+    # Imprimir la parte inferior del reloj de arena
+    for i in range(3, m + 1, 2):
+        space = (m - i) // 2
+        print(" " * space + s * i)
     
     # implementar la lógica para generar el reloj de arena en ASCII

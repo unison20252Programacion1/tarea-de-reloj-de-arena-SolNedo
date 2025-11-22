@@ -3,15 +3,17 @@
 def reloj_arena(m: int, s: str) -> str:
     # validar altura mayor que 0 e imprimir "Error: La altura debe ser un entero positivo" y salir
     if m <= 0:
-        print("Error: La altura debe ser un entero positivo")
-        return
-    # Imprimir la parte superior del reloj de arena
+        return "Error: La altura debe ser un entero positivo"
+    resultado = []
+    # Parte superior
     for i in range(m, 0, -2):
-        space = (m - i) // 2
-        print(" " * space + s * i)
-    # Imprimir la parte inferior del reloj de arena
-    for i in range(3, m + 1, 2):
-        space = (m - i) // 2
-        print(" " * space + s * i)
+        espacio = (m - i) // 2
+        resultado.append(" " * espacio + s * i)
+    # Parte inferior
+    inicio = 2 if m % 2 == 0 else 3
+    for i in range(inicio, m + 1, 2):
+        espacio = (m - i) // 2
+        resultado.append(" " * espacio + s * i)
+    return "\n".join(resultado)
     
     # implementar la lógica para generar el reloj de arena en ASCII

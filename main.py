@@ -32,7 +32,6 @@ def main():
     except ValueError:
         # TODO: imprimir "Error: La altura debe ser un numero entero" y salir
         print("Error: La altura debe ser un numero entero")
-        return
 
     # TODO: llamar a la función reloj_arena con los parámetros m y s
     reloj_arena(m, s)

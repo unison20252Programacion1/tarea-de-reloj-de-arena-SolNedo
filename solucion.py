@@ -3,7 +3,8 @@
 def reloj_arena(m: int, s: str) -> str:
     # validar altura mayor que 0 e imprimir "Error: La altura debe ser un entero positivo" y salir
     if m <= 0:
-        return "Error: La altura debe ser un entero positivo"
+        print("Error: La altura debe ser un entero positivo")
+        return 
     resultado = []
     # Parte superior
     for i in range(m, 0, -2):

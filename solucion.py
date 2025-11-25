@@ -14,6 +14,6 @@ def reloj_arena(m: int, s: str) -> str:
     for i in range(inicio, m + 1, 2):
         espacio = (m - i) // 2
         resultado.append(" " * espacio + s * i)
-    return "\n".join(resultado)
+    print("\n".join(resultado))
     
     # implementar la lógica para generar el reloj de arena en ASCII
